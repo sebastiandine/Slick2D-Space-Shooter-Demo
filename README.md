@@ -16,19 +16,19 @@ Since LWJGL requires OS dependent native libraries, you cannot just export an ex
 You need to create a so called 'fat .jar' which combines .jar files and OS dependent native files in one single .jar file. The tool [JarSplice](http://ninjacave.com/jarsplice) assits you in order to create such a fat jar. 
 
 Follow those instructions to create a single .jar which runs under your OS:
-1. Create a simple .jar (not executable .jar) from your game project. In my project, I put this .jar at `build/NotRunnable_SpaceShooter.jar` .
-2. Download and open JarSplice.
-3. In section <b>1) ADD JAR</b> of JarSplice, select the following files:
-..* `build/NotRunnable_SpaceShooter.jar`
-..* `lib/lwjgl.jar`
-..* `lib/slick.jar`
-3. In section <b>2) Add NATIVES</b> of JarSplice, you need to select all native files corresponding to your OS type. You can find natives for Windows, Linux and MacOSX in directory `lib/native`.
-..* for Windows select all files at `lib/native/windows`
-..* for Linux select all files at `lib/native/linux`
-..* for MacOSX select all files at `lib/native/macosx`
-4. In section <b>3) MAIN CLASS</b> of JarSplice, select the main class of your game.
-..* Since this game does only uses the default package, you only need to enter `Main` (without .java).
-5. Create the fat .jar through section <b>4) CREATE FAT JAR</b>, which will run independently on your OS. 
+* Create a simple .jar (not executable .jar) from your game project. In my project, I put this .jar at `build/NotRunnable_SpaceShooter.jar` .
+* Download and open JarSplice.
+* In section <b>1) ADD JAR</b> of JarSplice, select the following files:
+  * `build/NotRunnable_SpaceShooter.jar`
+  * `lib/lwjgl.jar`
+  * `lib/slick.jar`
+* In section <b>2) Add NATIVES</b> of JarSplice, you need to select all native files corresponding to your OS type. You can find natives for Windows, Linux and MacOSX in directory `lib/native`.
+  * for Windows select all files at `lib/native/windows`
+  * for Linux select all files at `lib/native/linux`
+  * for MacOSX select all files at `lib/native/macosx`
+* In section <b>3) MAIN CLASS</b> of JarSplice, select the main class of your game.
+  * Since this game does only uses the default package, you only need to enter `Main` (without .java).
+* Create the fat .jar through section <b>4) CREATE FAT JAR</b>, which will run independently on your OS. 
 
 ## Toolkit
 * [JDK v.1.8.0_65](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Java Development Kit. What else can I say?
